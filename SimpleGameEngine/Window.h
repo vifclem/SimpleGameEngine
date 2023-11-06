@@ -1,19 +1,20 @@
 #pragma once
 #include <SDL.h>
 
-constexpr int WINDOW_WIDTH = 800;
-constexpr int WINDOW_HEIGHT = 450;
+const int WINDOW_WIDTH = 1024;
+const int WINDOW_HEIGHT = 768;
 
 class Window
 {
-
-
-	SDL_Window* window{ nullptr };
-	int width{ WINDOW_WIDTH };
-	int height{ WINDOW_HEIGHT };
+    SDL_Window* SDLWindow{ nullptr };
+    int width{ WINDOW_WIDTH };
+    int height{ WINDOW_HEIGHT };
 
 public:
-	Window() = default;
+    Window() = default;
+    Window(const Window&) = delete;
+    Window& operator = (const Window&) = delete;
 
+    bool initialize();
+    void close();
 };
-
