@@ -1,9 +1,10 @@
 #pragma once
 #include <vector>
+#include "Actor.h"
+#include "SpriteComponent.h"
 #include "Window.h"
 #include "Renderer.h"
 #include "Vector2.h"
-#include "Actor.h"
 using std::vector;
 
 class Game
@@ -25,11 +26,15 @@ private:
 
 public:
 	bool initialize();
+	void load();
 	void loop();
+	void unload();
 	void close();
 
 	void addActor(Actor* actor);
 	void removeActor(Actor* actor);
+
+	Renderer& getRenderer() { return renderer; }
 
 private:
 	void processInput();

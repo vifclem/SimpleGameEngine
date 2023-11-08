@@ -1,12 +1,2 @@
-﻿  Actor.cpp
-  Component.cpp
-  Game.cpp
-  Log.cpp
-  Main.cpp
-  Rectangle.cpp
-  Renderer.cpp
-  Timer.cpp
-  Vector2.cpp
-  Window.cpp
-  Generating Code...
+﻿  Game.cpp
   SimpleGameEngine.vcxproj -> C:\Users\clement.expert\source\repos\SimpleGameEngine\x64\Debug\SimpleGameEngine.exe
