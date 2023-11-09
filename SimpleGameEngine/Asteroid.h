@@ -1,8 +1,15 @@
 #pragma once
 #include "Actor.h"
-class Asteroid : public Actor 
-{
-public :
-	Asteroid();
-};
+#include "CircleCollisionComponent.h"
 
+class Asteroid : public Actor
+{
+public:
+	Asteroid();
+	~Asteroid();
+
+	CircleCollisionComponent& getCollision() { return *collision; }
+
+private:
+	CircleCollisionComponent* collision;
+};

@@ -25,8 +25,9 @@ void Game::load()
 	Assets::loadTexture(renderer, "Res\\Farback01.png", "Farback01");
 	Assets::loadTexture(renderer, "Res\\Farback02.png", "Farback02");
 	Assets::loadTexture(renderer, "Res\\Stars.png", "Stars");
-	Assets::loadTexture(renderer, "Res\\Asteroid.png", "Astroid");
+	Assets::loadTexture(renderer, "Res\\Astroid.png", "Astroid");
 	Assets::loadTexture(renderer, "Res\\Ship.png", "Ship");
+	Assets::loadTexture(renderer, "Res\\Laser.png", "Laser");
 
 	// Single sprite
 	/*
@@ -144,6 +145,25 @@ void Game::render()
 	renderer.beginDraw();
 	renderer.draw();
 	renderer.endDraw();
+}
+
+vector<Asteroid*>& Game::getAstroids()
+{
+	return astroids;
+}
+
+void Game::addAstroid(Asteroid* astroid)
+{
+	astroids.emplace_back(astroid);
+}
+
+void Game::removeAstroid(Asteroid* astroid)
+{
+	auto iter = std::find(begin(astroids), end(astroids), astroid);
+	if (iter != astroids.end())
+	{
+		astroids.erase(iter);
+	}
 }
 
 void Game::loop()

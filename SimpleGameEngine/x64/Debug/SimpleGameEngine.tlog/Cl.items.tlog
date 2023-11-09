@@ -3,9 +3,11 @@ C:\Users\clement.expert\source\repos\SimpleGameEngine\SimpleGameEngine\AnimSprit
 C:\Users\clement.expert\source\repos\SimpleGameEngine\SimpleGameEngine\Assets.cpp;C:\Users\clement.expert\source\repos\SimpleGameEngine\SimpleGameEngine\x64\Debug\Assets.obj
 C:\Users\clement.expert\source\repos\SimpleGameEngine\SimpleGameEngine\Asteroid.cpp;C:\Users\clement.expert\source\repos\SimpleGameEngine\SimpleGameEngine\x64\Debug\Asteroid.obj
 C:\Users\clement.expert\source\repos\SimpleGameEngine\SimpleGameEngine\BackGroundSpriteComponent.cpp;C:\Users\clement.expert\source\repos\SimpleGameEngine\SimpleGameEngine\x64\Debug\BackGroundSpriteComponent.obj
+C:\Users\clement.expert\source\repos\SimpleGameEngine\SimpleGameEngine\CircleCollisionComponent.cpp;C:\Users\clement.expert\source\repos\SimpleGameEngine\SimpleGameEngine\x64\Debug\CircleCollisionComponent.obj
 C:\Users\clement.expert\source\repos\SimpleGameEngine\SimpleGameEngine\Component.cpp;C:\Users\clement.expert\source\repos\SimpleGameEngine\SimpleGameEngine\x64\Debug\Component.obj
 C:\Users\clement.expert\source\repos\SimpleGameEngine\SimpleGameEngine\Game.cpp;C:\Users\clement.expert\source\repos\SimpleGameEngine\SimpleGameEngine\x64\Debug\Game.obj
 C:\Users\clement.expert\source\repos\SimpleGameEngine\SimpleGameEngine\InputComponent.cpp;C:\Users\clement.expert\source\repos\SimpleGameEngine\SimpleGameEngine\x64\Debug\InputComponent.obj
+C:\Users\clement.expert\source\repos\SimpleGameEngine\SimpleGameEngine\Laser.cpp;C:\Users\clement.expert\source\repos\SimpleGameEngine\SimpleGameEngine\x64\Debug\Laser.obj
 C:\Users\clement.expert\source\repos\SimpleGameEngine\SimpleGameEngine\Log.cpp;C:\Users\clement.expert\source\repos\SimpleGameEngine\SimpleGameEngine\x64\Debug\Log.obj
 C:\Users\clement.expert\source\repos\SimpleGameEngine\SimpleGameEngine\Main.cpp;C:\Users\clement.expert\source\repos\SimpleGameEngine\SimpleGameEngine\x64\Debug\Main.obj
 C:\Users\clement.expert\source\repos\SimpleGameEngine\SimpleGameEngine\MoveComponent.cpp;C:\Users\clement.expert\source\repos\SimpleGameEngine\SimpleGameEngine\x64\Debug\MoveComponent.obj
