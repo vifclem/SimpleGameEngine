@@ -5,7 +5,7 @@
 #include "Window.h"
 #include "Renderer.h"
 #include "Vector2.h"
-#include "Asteroid.h"
+
 using std::vector;
 
 class Game
@@ -37,9 +37,7 @@ public:
 
 	Renderer& getRenderer() { return renderer; }
 	// Game specific
-	vector<Asteroid*>& getAstroids();
-	void addAstroid(Asteroid* astroid);
-	void removeAstroid(Asteroid* astroid);
+	
 
 private:
 	void processInput();
@@ -54,6 +52,5 @@ private:
 	vector<Actor*> actors;
 	vector<Actor*> pendingActors;
 
-	// Game specific
-	vector<Asteroid*> astroids;
+	
 };

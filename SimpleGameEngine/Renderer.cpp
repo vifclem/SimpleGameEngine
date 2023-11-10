@@ -4,6 +4,7 @@
 #include "Maths.h"
 #include "SpriteComponent.h"
 
+
 #include <SDL_image.h>
 
 Renderer::Renderer() : SDLRenderer(nullptr)
@@ -39,6 +40,7 @@ void Renderer::beginDraw()
 void Renderer::draw()
 {
 	drawSprites();
+	drawRectangles();
 }
 
 void Renderer::endDraw()
@@ -46,11 +48,31 @@ void Renderer::endDraw()
 	SDL_RenderPresent(SDLRenderer);
 }
 
-void Renderer::drawRect(const Rectangle& rect) const
+void Renderer::drawRectangle(const Rectangle& rect) const
 {
 	SDL_SetRenderDrawColor(SDLRenderer, 255, 255, 255, 255);
 	SDL_Rect SDLRect = rect.toSDLRect();
 	SDL_RenderFillRect(SDLRenderer, &SDLRect);
+}
+
+void Renderer::drawRectangles() {
+
+	for (auto rect : rectangles) {
+
+		rect->draw(*this);
+	}
+}
+
+void Renderer::addRectangle(BoxComponent* rectangle)
+{
+	rectangles.push_back(rectangle);
+
+}
+
+void Renderer::removeRectangle(BoxComponent* rectangle)
+{
+	auto iter = std::find(begin(rectangles), end(rectangles), rectangle);
+	rectangles.erase(iter);
 }
 
 void Renderer::drawSprites()
@@ -119,3 +141,4 @@ void Renderer::removeSprite(SpriteComponent* sprite)
 	auto iter = std::find(begin(sprites), end(sprites), sprite);
 	sprites.erase(iter);
 }
+
