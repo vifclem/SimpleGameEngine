@@ -7,6 +7,7 @@
 #include "BackgroundSpriteComponent.h"
 #include "BoxComponent.h"
 
+//hey
 bool Game::initialize()
 {
 	bool isWindowInit = window.initialize();
