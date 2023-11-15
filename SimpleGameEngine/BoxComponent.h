@@ -16,7 +16,7 @@ public:
 
 	//virtual void setTexture(const Texture& textureP);
 	void draw(Renderer& renderer);
-
+	
 	//int getDrawOrder() const { return drawOrder; }
 	
 

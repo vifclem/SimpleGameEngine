@@ -6,6 +6,9 @@
 #include "Assets.h"
 #include "BackgroundSpriteComponent.h"
 #include "BoxComponent.h"
+#include "Ball.h"
+#include "Bricks.h"
+#include "Player.h"
 
 bool Game::initialize()
 {
@@ -35,9 +38,12 @@ void Game::load()
 	actor->setPosition(Vector2{ 100, 100 });*/
 	
 
-	Actor* actor2 = new Actor();
+	/*Actor* actor2 = new Actor();
 	BoxComponent* rect = new BoxComponent(actor2, 100, 20);
-	actor2->setPosition(Vector2{ 450, 650 });
+	actor2->setPosition(Vector2{ 450, 650 });*/
+
+	Actor* player = new Player();
+
 
 	// Animated sprite
 	/*
@@ -81,6 +87,20 @@ void Game::load()
 	{
 		new Asteroid();
 	}*/
+	//Spawn Ball Actors
+	const int ballNumber = 1;
+	for (int i = 0; i < ballNumber; i++)
+	{
+		new Ball();
+	}
+
+	const int bricksNumber = 20;
+	for (int i = 0; i < bricksNumber; i++)
+	{
+		new Bricks();
+	}
+
+	
 }
 
 void Game::processInput()
@@ -96,6 +116,7 @@ void Game::processInput()
 			break;
 		}
 	}
+
 	// Keyboard state
 	const Uint8* keyboardState = SDL_GetKeyboardState(nullptr);
 	// Escape: quit game

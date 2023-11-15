@@ -3,6 +3,7 @@
 #include "Texture.h"
 #include "Maths.h"
 #include "SpriteComponent.h"
+#include "Random.h"
 
 
 #include <SDL_image.h>
