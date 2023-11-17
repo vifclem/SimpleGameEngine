@@ -8,7 +8,8 @@ InputComponent::InputComponent(Actor* ownerP) :
 	forwardKey(SDL_SCANCODE_W),
 	backKey(SDL_SCANCODE_S),
 	clockwiseKey(SDL_SCANCODE_D),
-	counterClockwiseKey(SDL_SCANCODE_A)
+	counterClockwiseKey(SDL_SCANCODE_A),
+	lunchBallKey(SDL_SCANCODE_SPACE)
 {
 }
 
@@ -35,6 +36,14 @@ void InputComponent::processInput(const Uint8* keyState)
 		angularSpeed += maxAngularSpeed;
 	}
 	setAngularSpeed(angularSpeed);
+
+	
+	if (keyState[lunchBallKey])
+	{
+		forwardSpeed += maxForwardSpeed;
+	}
+	setForwardSpeed(forwardSpeed);
+
 }
 
 void InputComponent::setMaxForwardSpeed(float maxForwardSpeedP)
@@ -46,6 +55,8 @@ void InputComponent::setMaxAngularSpeed(float maxAngularSpeedP)
 {
 	maxAngularSpeed = maxAngularSpeedP;
 }
+
+
 
 void InputComponent::setForwardKey(int key)
 {
@@ -65,4 +76,9 @@ void InputComponent::setClockwiseKey(int key)
 void InputComponent::setCounterClockwiseKey(int key)
 {
 	counterClockwiseKey = key;
+}
+
+void InputComponent::setlunchBallKey(int key)
+{
+	lunchBallKey = key;
 }

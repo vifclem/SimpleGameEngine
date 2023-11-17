@@ -6,7 +6,5 @@ class Player : public Actor
 {
 public:
 	Player();
-
-	void actorInput(const Uint8* keyState) override;
 };
 

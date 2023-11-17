@@ -30,6 +30,7 @@ void Game::load()
 	Assets::loadTexture(renderer, "Res\\Astroid.png", "Astroid");
 	Assets::loadTexture(renderer, "Res\\Ship.png", "Ship");
 	Assets::loadTexture(renderer, "Res\\Laser.png", "Laser");
+	Assets::loadTexture(renderer, "Res\\Paddle.png", "paddle");
 
 	// Single sprite
 	

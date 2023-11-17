@@ -1,9 +1,10 @@
 #include "Player.h"
-#include "Random.h"
-#include "Window.h"
 #include "Math.h"
 #include "Assets.h"
 #include "BoxComponent.h"
+#include "SpriteComponent.h"
+#include "Assets.h"
+#include "InputComponent.h"
 
 
 Player::Player() :Actor() {
@@ -11,19 +12,16 @@ Player::Player() :Actor() {
 	setPosition(Vector2{ 450, 700 });
 	setRotation(0);
 
+	//SpriteComponent* ff = new SpriteComponent(this, Assets::getTexture("Paddle"));
 	BoxComponent* bc = new BoxComponent(this, 100, 20);
-
+	InputComponent* ic = new InputComponent(this);
 	
+	ic->setMaxForwardSpeed(400.0f);
+	ic->setForwardKey(SDL_SCANCODE_D);
+	ic->setBackKey(SDL_SCANCODE_A);
+	ic->setlunchBallKey(2);
+	ic->setClockwiseKey(2);
+	ic->setCounterClockwiseKey(2);
 }
 
-void Player::actorInput(const Uint8* keyState)
-{
-	if (keyState[SDL_SCANCODE_D])
-	{
-		//move right player actor 
-	}
-	if (keyState[SDL_SCANCODE_A])
-	{
-		//move left player actor 
-	}
-}
+

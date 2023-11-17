@@ -18,6 +18,7 @@ public:
 	void setBackKey(int key);
 	void setClockwiseKey(int key);
 	void setCounterClockwiseKey(int key);
+	void setlunchBallKey(int key);
 
 
 private:
@@ -28,4 +29,5 @@ private:
 	int backKey;
 	int clockwiseKey;
 	int counterClockwiseKey;
+	int lunchBallKey;
 };
