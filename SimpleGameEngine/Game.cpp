@@ -9,6 +9,7 @@
 #include "Ball.h"
 #include "Bricks.h"
 #include "Player.h"
+#include "Oponent.h"
 
 bool Game::initialize()
 {
@@ -44,6 +45,8 @@ void Game::load()
 	actor2->setPosition(Vector2{ 450, 650 });*/
 
 	Actor* player = new Player();
+
+	Actor* oponent = new Oponent();
 
 
 	// Animated sprite
@@ -83,11 +86,7 @@ void Game::load()
 	bgSpritesClose->setScrollSpeed(-200.0f);*/
 
 	
-	/*const int astroidNumber = 20;
-	for (int i = 0; i < astroidNumber; ++i)
-	{
-		new Asteroid();
-	}*/
+	
 	//Spawn Ball Actors
 	const int ballNumber = 1;
 	for (int i = 0; i < ballNumber; i++)
@@ -95,11 +94,6 @@ void Game::load()
 		new Ball();
 	}
 
-	const int bricksNumber = 20;
-	for (int i = 0; i < bricksNumber; i++)
-	{
-		new Bricks();
-	}
 
 	
 }
