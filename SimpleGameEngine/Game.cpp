@@ -86,7 +86,8 @@ void Game::load()
 	bgSpritesClose->setScrollSpeed(-200.0f);*/
 
 	
-	
+	 Actor* brick = new Bricks();
+
 	//Spawn Ball Actors
 	const int ballNumber = 1;
 	for (int i = 0; i < ballNumber; i++)
