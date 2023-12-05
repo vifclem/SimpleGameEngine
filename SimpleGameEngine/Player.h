@@ -5,6 +5,6 @@
 class Player : public Actor
 {
 public:
-	Player();
+	Player(float mSizeX, float mSizeY);
 };
 

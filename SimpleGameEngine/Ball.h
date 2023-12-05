@@ -4,16 +4,19 @@
 #include <SDL_stdinc.h>
 #include "CircleCollisionComponent.h"
 #include "Bricks.h"
+#include "SpriteComponent.h"
+#include "MoveBall.h"
 
 class Ball : public Actor
 {	
 public :
-	Ball();
+	Ball(float mSizeX, float mSizeY);
 
-	//void updateActor(float dt) override;
-
+	
 private:
-	//CircleCollisionComponent* collision;
+	
 
+	BoxComponent* bc;
+	MoveBall* mb;
 };
 

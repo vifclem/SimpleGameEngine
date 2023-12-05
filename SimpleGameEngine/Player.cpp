@@ -7,13 +7,14 @@
 #include "InputComponent.h"
 
 
-Player::Player() :Actor() {
+Player::Player(float mSizeX, float mSizeY) :Actor() {
 
 	setPosition(Vector2{ 450, 700 });
-	setRotation(0);
+	setSizeX(mSizeX);
+	setSizeY(mSizeY);
 
 	//SpriteComponent* ff = new SpriteComponent(this, Assets::getTexture("Paddle"));
-	BoxComponent* bc = new BoxComponent(this, 100, 20);
+	BoxComponent* bc = new BoxComponent(this, mSizeX, mSizeY);
 	InputComponent* ic = new InputComponent(this);
 	
 	ic->setMaxForwardSpeed(400.0f);

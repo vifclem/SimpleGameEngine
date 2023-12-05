@@ -9,16 +9,19 @@ public:
 	MoveComponent& operator=(const MoveComponent&) = delete;
 
 	float getForwardSpeed() const { return forwardSpeed; }
+	float getUpwardSpeed() const { return upwardSpeed; }
 	float getAngularSpeed() const { return angularSpeed; }
 
 	void setForwardSpeed(float forwardSpeedP);
+	void setUpwardSpeed(float upwardSpeedP);
 	void setAngularSpeed(float angularSpeedP);
 
-	void update(float dt) override;
+	virtual void update(float dt) override;
 
 
-private:
+protected:
 	float forwardSpeed;
 	float angularSpeed;
+	float upwardSpeed;
 
 };

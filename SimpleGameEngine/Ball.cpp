@@ -8,23 +8,27 @@
 
 
 
-Ball::Ball() : Actor() {
+Ball::Ball(float mSizeX, float mSizeY) : Actor() {
 	
-	
-	setPosition(Vector2{ 450, 400 });
-	setRotation(190);
+	setSizeX(mSizeX);
+	setSizeY(mSizeY);
 
-	SpriteComponent* sc = new SpriteComponent(this, Assets::getTexture("Astroid"));
-	MoveComponent* mc = new MoveComponent(this);
-	InputComponent* ic = new InputComponent(this);
-	ic->setClockwiseKey(SDL_SCANCODE_RIGHT);
-	ic->setCounterClockwiseKey(SDL_SCANCODE_LEFT);
-	ic->setMaxForwardSpeed(300.0f);
-	mc->setForwardSpeed(300.0f);
-	ic->setForwardKey(2);
-	ic->setBackKey(2);
+	setPosition(Vector2{ 450, 400 });
+
+	//SpriteComponent* sc = new SpriteComponent(this, Assets::getTexture("Astroid"));
+	bc = new BoxComponent(this, mSizeX, mSizeY);
+	mb = new MoveBall(this);
+	mb->setForwardSpeed(300.0f);
+	mb->setUpwardSpeed(300.0f);
+	mb->setAngularSpeed(0.0f);
+	getPosition();
 	
 }
+
+//make an update actor that check if ball is colliding and act by it.
+
+
+
 
 
 

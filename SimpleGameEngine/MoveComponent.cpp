@@ -4,7 +4,7 @@
 #include "Window.h"
 
 MoveComponent::MoveComponent(Actor* ownerP, int updateOrderP)
-	: Component(ownerP, updateOrderP), forwardSpeed(0.0f), angularSpeed(0.0f)
+	: Component(ownerP, updateOrderP), forwardSpeed(0.0f), angularSpeed(0.0f), upwardSpeed(0.0f)
 {
 
 }
@@ -12,6 +12,11 @@ MoveComponent::MoveComponent(Actor* ownerP, int updateOrderP)
 void MoveComponent::setForwardSpeed(float forwardSpeedP)
 {
 	forwardSpeed = forwardSpeedP;
+}
+
+void MoveComponent::setUpwardSpeed(float upwardSpeedP)
+{
+	upwardSpeed = upwardSpeedP;
 }
 
 void MoveComponent::setAngularSpeed(float angularSpeedP)

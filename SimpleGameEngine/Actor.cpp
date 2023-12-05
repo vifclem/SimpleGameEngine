@@ -45,9 +45,24 @@ void Actor::setState(ActorState stateP)
 	state = stateP;
 }
 
+void Actor::setSizeX(float sizeXP)
+{
+	sizeX = sizeXP;
+}
+
+void Actor::setSizeY(float sizeYP)
+{
+	sizeY = sizeYP;
+}
+
 Vector2 Actor::getForward() const
 {
 	return Vector2(Maths::cos(rotation), -Maths::sin(rotation));
+}
+
+Vector2 Actor::getUpward() const
+{
+	return Vector2(Maths::sin(rotation), -Maths::cos(rotation));
 }
 
 void Actor::processInput(const Uint8* keyState)
@@ -113,3 +128,4 @@ void Actor::removeComponent(Component* component)
 		components.erase(iter);
 	}
 }
+

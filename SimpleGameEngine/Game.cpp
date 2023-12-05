@@ -33,20 +33,19 @@ void Game::load()
 	Assets::loadTexture(renderer, "Res\\Laser.png", "Laser");
 	Assets::loadTexture(renderer, "Res\\Paddle.png", "paddle");
 
-	// Single sprite
+
 	
-	/*Actor* actor = new Actor();
-	SpriteComponent* sprite = new SpriteComponent(actor, Assets::getTexture("Ship01"));
-	actor->setPosition(Vector2{ 100, 100 });*/
 	
 
 	/*Actor* actor2 = new Actor();
 	BoxComponent* rect = new BoxComponent(actor2, 100, 20);
 	actor2->setPosition(Vector2{ 450, 650 });*/
 
-	Actor* player = new Player();
+	Actor* player = new Player(100,20);
 
 	Actor* oponent = new Oponent();
+
+	Ball* ball = new Ball(20, 20);
 
 
 	// Animated sprite
@@ -86,14 +85,10 @@ void Game::load()
 	bgSpritesClose->setScrollSpeed(-200.0f);*/
 
 	
-	 Actor* brick = new Bricks();
 
-	//Spawn Ball Actors
-	const int ballNumber = 1;
-	for (int i = 0; i < ballNumber; i++)
-	{
-		new Ball();
-	}
+	
+		
+	
 
 
 	
