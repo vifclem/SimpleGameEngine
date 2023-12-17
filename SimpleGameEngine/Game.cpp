@@ -6,10 +6,7 @@
 #include "Assets.h"
 #include "BackgroundSpriteComponent.h"
 #include "BoxComponent.h"
-#include "Ball.h"
 #include "Bricks.h"
-#include "Player.h"
-#include "Oponent.h"
 
 bool Game::initialize()
 {
@@ -34,18 +31,12 @@ void Game::load()
 	Assets::loadTexture(renderer, "Res\\Paddle.png", "paddle");
 
 
-	
-	
 
-	/*Actor* actor2 = new Actor();
-	BoxComponent* rect = new BoxComponent(actor2, 100, 20);
-	actor2->setPosition(Vector2{ 450, 650 });*/
+	new Player(100,20);
 
-	Actor* player = new Player(100,20);
+	new Oponent(100,20);
 
-	Actor* oponent = new Oponent();
-
-	Ball* ball = new Ball(20, 20);
+	new Ball(20, 20);
 
 
 	// Animated sprite
@@ -93,6 +84,38 @@ void Game::load()
 
 	
 }
+
+Player* Game::getPlayer() {
+
+	return player;
+}
+
+void Game::setPlayer(Player* playerP) {
+
+	player = playerP;
+}
+
+
+
+Oponent* Game::getOponent() {
+	return oponent;
+}
+
+void Game::setOponent(Oponent* oponentP) {
+	oponent = oponentP;
+}
+
+
+
+Ball* Game::getBall() {
+	return ball;
+}
+
+void Game::setBall(Ball* ballP) {
+	ball = ballP;
+}
+
+
 
 void Game::processInput()
 {

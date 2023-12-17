@@ -10,18 +10,10 @@ public:
 	BoxCollisionComponent(const BoxCollisionComponent&) = delete;
 	BoxCollisionComponent& operator=(const BoxCollisionComponent&) = delete;
 
-	
-	float getWidth() const;
-	float getHeight() const;
+	const Vector2 getPosition() const;
+	const float getSizeX() const;
+	const float getSizeY() const;
 
-	void setWidth(float width);
-	void setHeight(float height);
-
-	const Vector2 getCenter() const;
-
-private:
-	float height;
-	float width;
 };
 
 bool Intersect(const BoxCollisionComponent& a, const BoxCollisionComponent& b);

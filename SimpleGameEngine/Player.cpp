@@ -1,10 +1,10 @@
 #include "Player.h"
 #include "Math.h"
 #include "Assets.h"
-#include "BoxComponent.h"
 #include "SpriteComponent.h"
 #include "Assets.h"
-#include "InputComponent.h"
+#include "Game.h"
+
 
 
 Player::Player(float mSizeX, float mSizeY) :Actor() {
@@ -14,8 +14,10 @@ Player::Player(float mSizeX, float mSizeY) :Actor() {
 	setSizeY(mSizeY);
 
 	//SpriteComponent* ff = new SpriteComponent(this, Assets::getTexture("Paddle"));
+
 	BoxComponent* bc = new BoxComponent(this, mSizeX, mSizeY);
-	InputComponent* ic = new InputComponent(this);
+
+    ic = new InputComponent(this);
 	
 	ic->setMaxForwardSpeed(400.0f);
 	ic->setForwardKey(SDL_SCANCODE_D);
@@ -23,6 +25,9 @@ Player::Player(float mSizeX, float mSizeY) :Actor() {
 	ic->setlunchBallKey(2);
 	ic->setClockwiseKey(2);
 	ic->setCounterClockwiseKey(2);
+
+	bcc = new BoxCollisionComponent(this);
+	getGame().setPlayer(this);
 }
 
 

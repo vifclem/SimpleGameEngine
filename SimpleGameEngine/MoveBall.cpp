@@ -1,12 +1,11 @@
 #include "MoveBall.h"
 #include "Maths.h"
 #include "Actor.h"
-#include "Window.h"
 #include "BoxComponent.h"
 #include <SDL_scancode.h>
 
 MoveBall::MoveBall(Actor* ownerP) :
-	MoveComponent(ownerP), playerScore(0.0f), ennemieScore(0.0f)
+	MoveComponent(ownerP), playerScore(0.0f), ennemieScore(0.0f), player(), ennemie()
 {
 }
 
@@ -43,16 +42,20 @@ void MoveBall::update(float dt)
 			owner.setPosition(Vector2{ 400,400 });
 		}
 
+
 		Vector2 newPosition = owner.getPosition() + owner.getForward() * forwardSpeed * dt + owner.getUpward() * upwardSpeed * dt;
 		owner.setPosition(newPosition);
 	}
 
 	if (playerScore >= 5) {
 		//close window
+		window.close();
 	}
 
 	if (ennemieScore >= 5) {
 		//close window
+		window.close();
+
 	}
 }
 

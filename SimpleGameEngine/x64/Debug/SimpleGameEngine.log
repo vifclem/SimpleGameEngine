@@ -1,4 +1,4 @@
-﻿  Game.cpp
-  MoveBall.cpp
+﻿  Ball.cpp
+  Player.cpp
   Génération de code en cours...
   SimpleGameEngine.vcxproj -> C:\Users\cleme\OneDrive\Documents\Work\Github\SimpleGameEngine\x64\Debug\SimpleGameEngine.exe

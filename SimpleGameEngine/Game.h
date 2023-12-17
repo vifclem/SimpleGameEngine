@@ -5,6 +5,9 @@
 #include "Window.h"
 #include "Renderer.h"
 #include "Vector2.h"
+#include "Player.h"
+#include "Ball.h"
+#include "Oponent.h"
 
 using std::vector;
 
@@ -35,6 +38,16 @@ public:
 	void addActor(Actor* actor);
 	void removeActor(Actor* actor);
 
+	Player* getPlayer();
+	void setPlayer(Player* player);
+
+	Oponent* getOponent();
+	void setOponent(Oponent* oponent);
+
+	Ball* getBall();
+	void setBall(Ball* ball);
+
+
 	Renderer& getRenderer() { return renderer; }
 	// Game specific
 	
@@ -52,5 +65,8 @@ private:
 	vector<Actor*> actors;
 	vector<Actor*> pendingActors;
 
+	Player* player = nullptr;
+	Oponent* oponent = nullptr;
+	Ball* ball = nullptr;
 	
 };

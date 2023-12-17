@@ -1,41 +1,34 @@
 #include "BoxCollisionComponent.h"
 #include "Actor.h"
 
-BoxCollisionComponent::BoxCollisionComponent(Actor* owner) : Component(owner), height(20.0f), width(50.0f)
+BoxCollisionComponent::BoxCollisionComponent(Actor* owner) : Component(owner)
 {
 }
 
-float BoxCollisionComponent::getWidth() const
-{
-	return owner.getScale() * width;
-}
-
-float BoxCollisionComponent::getHeight() const
-{
-	return owner.getScale() * height;
-}
-
-void BoxCollisionComponent::setWidth(float widthP)
-{
-	width = widthP;
-}
-
-void BoxCollisionComponent::setHeight(float heightP)
-{
-	height = heightP;
-}
-
-const Vector2 BoxCollisionComponent::getCenter() const
+const Vector2 BoxCollisionComponent::getPosition() const
 {
 	return owner.getPosition();
 }
 
-//bool Intersect(const BoxCollisionComponent& a, const BoxCollisionComponent& b)
-//{
-//	Vector2 aCenter = a.getCenter();
-//	Vector2 bCenter = b.getCenter();
-//	Vector2 ab = bCenter - aCenter;
-//	float distSq = ab.lengthSq();
-//	float sumOfRadius = a.getRadius() + b.getRadius();
-//	return distSq <= sumOfRadius * sumOfRadius;
-//}
+const float BoxCollisionComponent::getSizeX() const
+{
+	return owner.getSizeX();
+}
+
+const float BoxCollisionComponent::getSizeY() const
+{
+	return owner.getSizeY();
+}
+
+bool Intersect(const BoxCollisionComponent& a, const BoxCollisionComponent& b)
+{
+	float xMinA = a.getPosition().x;
+	float xMaxA = a.getPosition().x + a.getSizeX();
+	float yMinA = a.getPosition().y;
+	float yMaxA = a.getPosition().y + a.getSizeY();
+	float xMinB = b.getPosition().x;
+	float xMaxB = b.getPosition().x + b.getSizeX();
+	float yMinB = b.getPosition().y;
+	float yMaxB = b.getPosition().y + b.getSizeY();
+	return!(xMinA > xMaxB || xMaxA < xMinB || yMinA > yMaxB || yMaxA < yMinB);
+}
