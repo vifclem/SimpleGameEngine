@@ -28,6 +28,7 @@ Player::Player(float mSizeX, float mSizeY) :Actor() {
 
 	bcc = new BoxCollisionComponent(this);
 	getGame().setPlayer(this);
+	
 }
 
 

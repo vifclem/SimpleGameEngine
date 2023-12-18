@@ -74,14 +74,6 @@ void Game::load()
 	};
 	BackgroundSpriteComponent* bgSpritesClose = new BackgroundSpriteComponent(bgClose, bgTexsClose, 50);
 	bgSpritesClose->setScrollSpeed(-200.0f);*/
-
-	
-
-	
-		
-	
-
-
 	
 }
 
@@ -113,6 +105,12 @@ Ball* Game::getBall() {
 
 void Game::setBall(Ball* ballP) {
 	ball = ballP;
+}
+
+void Game::EndGame()
+{
+	isRunning = false;
+	close();
 }
 
 

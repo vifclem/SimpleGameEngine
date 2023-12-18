@@ -16,7 +16,7 @@ Ball::Ball(float mSizeX, float mSizeY) : Actor() {
 
 	setPosition(Vector2{ 450, 400 });
 
-	//SpriteComponent* sc = new SpriteComponent(this, Assets::getTexture("Astroid"));
+	SpriteComponent* sc = new SpriteComponent(this, Assets::getTexture("Astroid"));
 	bc = new BoxComponent(this, mSizeX, mSizeY);
 	mb = new MoveBall(this);
 	mb->setForwardSpeed(300.0f);
@@ -63,7 +63,6 @@ void Ball::updateActor(float dt)
 			}
 		}
 	}
-
 }
 
 

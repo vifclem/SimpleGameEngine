@@ -47,6 +47,8 @@ public:
 	Ball* getBall();
 	void setBall(Ball* ball);
 
+	void EndGame();
+
 
 	Renderer& getRenderer() { return renderer; }
 	// Game specific
