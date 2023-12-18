@@ -31,11 +31,12 @@ void Game::load()
 	Assets::loadTexture(renderer, "Res\\Paddle.png", "paddle");
 	Assets::loadTexture(renderer, "Res\\Ball.png", "Ball");
 	Assets::loadTexture(renderer, "Res\\Wall.png", "Wall");
+	Assets::loadTexture(renderer, "Res\\Player.png", "Player");
 
 
 
-	new Player((int)Assets::getTexture("Wall").getWidth(), (int)Assets::getTexture("Wall").getHeight());
-	SpriteComponent* wallSprite = new SpriteComponent(player, Assets::getTexture("Wall"));
+	new Player((int)Assets::getTexture("Player").getWidth(), (int)Assets::getTexture("Player").getHeight());
+	SpriteComponent* wallSprite = new SpriteComponent(player, Assets::getTexture("Player"));
 
 	new Oponent((int)Assets::getTexture("Wall").getWidth(), (int)Assets::getTexture("Wall").getHeight());
 	SpriteComponent* wallSprite2 = new SpriteComponent(oponent, Assets::getTexture("Wall"));
