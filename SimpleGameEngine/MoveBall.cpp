@@ -4,6 +4,9 @@
 #include "BoxComponent.h"
 #include <SDL_scancode.h>
 #include "Game.h"
+#include <iostream>
+
+using namespace std;
 
 MoveBall::MoveBall(Actor* ownerP) :
 	MoveComponent(ownerP), playerScore(0.0f), ennemieScore(0.0f), player(), ennemie(), game(Game::instance())
@@ -50,11 +53,14 @@ void MoveBall::update(float dt)
 	if (playerScore >= 5) {
 		//close window
 		getGame().EndGame();
+		cout << "You WON !!" << endl;
 	}
 
 	if (ennemieScore >= 5) {
 		//close window
 		getGame().EndGame();
+		cout << "You LOST !!" << endl;
+
 	}
 }
 

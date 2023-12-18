@@ -40,8 +40,8 @@ void Renderer::beginDraw()
 
 void Renderer::draw()
 {
-	drawSprites();
 	drawRectangles();
+	drawSprites();
 }
 
 void Renderer::endDraw()
@@ -94,8 +94,8 @@ void Renderer::drawSprite(const Actor& actor, const Texture& tex, Rectangle srcR
 	dstRect.w = static_cast<int>(tex.getWidth() * scale);
 	dstRect.h = static_cast<int>(tex.getHeight() * scale);
 	// Center the rectangle around the position of the owner
-	dstRect.x = static_cast<int>(position.x - origin.x);
-	dstRect.y = static_cast<int>(position.y - origin.y);
+	dstRect.x = static_cast<int>(position.x);
+	dstRect.y = static_cast<int>(position.y);
 
 	SDL_Rect* srcSDL = nullptr;
 	if (srcRect != Rectangle::nullRect)

@@ -29,15 +29,19 @@ void Game::load()
 	Assets::loadTexture(renderer, "Res\\Ship.png", "Ship");
 	Assets::loadTexture(renderer, "Res\\Laser.png", "Laser");
 	Assets::loadTexture(renderer, "Res\\Paddle.png", "paddle");
+	Assets::loadTexture(renderer, "Res\\Ball.png", "Ball");
+	Assets::loadTexture(renderer, "Res\\Wall.png", "Wall");
 
 
 
-	new Player(100,20);
+	new Player((int)Assets::getTexture("Wall").getWidth(), (int)Assets::getTexture("Wall").getHeight());
+	SpriteComponent* wallSprite = new SpriteComponent(player, Assets::getTexture("Wall"));
 
-	new Oponent(100,20);
+	new Oponent((int)Assets::getTexture("Wall").getWidth(), (int)Assets::getTexture("Wall").getHeight());
+	SpriteComponent* wallSprite2 = new SpriteComponent(oponent, Assets::getTexture("Wall"));
 
-	new Ball(20, 20);
-
+	new Ball((int)Assets::getTexture("Ball").getWidth(), (int)Assets::getTexture("Ball").getHeight());
+	SpriteComponent* ballSprite = new SpriteComponent(ball, Assets::getTexture("Ball"));
 
 	// Animated sprite
 	/*

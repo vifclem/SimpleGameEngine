@@ -16,8 +16,8 @@ Ball::Ball(float mSizeX, float mSizeY) : Actor() {
 
 	setPosition(Vector2{ 450, 400 });
 
-	SpriteComponent* sc = new SpriteComponent(this, Assets::getTexture("Astroid"));
-	bc = new BoxComponent(this, mSizeX, mSizeY);
+	
+	//bc = new BoxComponent(this, mSizeX, mSizeY);
 	mb = new MoveBall(this);
 	mb->setForwardSpeed(300.0f);
 	mb->setUpwardSpeed(300.0f);
@@ -52,7 +52,7 @@ void Ball::updateActor(float dt)
 	auto oponent = getGame().getOponent();
 
 	if (Intersect(*bcc, oponent->getCollision())) {
-		if (bcc->getPosition().y + bcc->getSizeY() - 30 < oponent->getPosition().y) {
+		if (bcc->getPosition().y + bcc->getSizeY() - 50 < oponent->getPosition().y) {
 
 			if (mb->getUpwardSpeed() > 0) {
 				mb->setUpwardSpeed(-mb->getUpwardSpeed());
