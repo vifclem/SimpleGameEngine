@@ -47,6 +47,10 @@ public:
 	Ball* getBall();
 	void setBall(Ball* ball);
 
+	void Win();
+	void Lost();
+
+
 	void EndGame();
 
 

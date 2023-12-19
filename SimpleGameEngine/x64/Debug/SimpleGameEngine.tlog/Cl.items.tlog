@@ -8,6 +8,7 @@ C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\BoxCo
 C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\Bricks.cpp;C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\x64\Debug\Bricks.obj
 C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\CircleCollisionComponent.cpp;C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\x64\Debug\CircleCollisionComponent.obj
 C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\Component.cpp;C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\x64\Debug\Component.obj
+C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\EndGameMessage.cpp;C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\x64\Debug\EndGameMessage.obj
 C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\Game.cpp;C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\x64\Debug\Game.obj
 C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\InputComponent.cpp;C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\x64\Debug\InputComponent.obj
 C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\Log.cpp;C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\x64\Debug\Log.obj

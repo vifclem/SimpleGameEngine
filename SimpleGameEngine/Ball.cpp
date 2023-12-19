@@ -15,6 +15,7 @@ Ball::Ball(float mSizeX, float mSizeY) : Actor() {
 	setSizeY(mSizeY);
 
 	setPosition(Vector2{ 450, 400 });
+	lastFramRegistered = this->getPosition();
 
 	
 	//bc = new BoxComponent(this, mSizeX, mSizeY);
@@ -37,7 +38,7 @@ void Ball::updateActor(float dt)
 
 	if (Intersect(*bcc, player->getCollision())) {
 
-		if (bcc->getPosition().y + bcc->getSizeY() - 4 < player->getPosition().y) {
+		if (lastFramRegistered.y + bcc->getSizeY()<= player->getPosition().y) {
 			
 			if (mb->getUpwardSpeed() < 0) {
 				mb->setUpwardSpeed(-mb->getUpwardSpeed());
@@ -52,7 +53,7 @@ void Ball::updateActor(float dt)
 	auto oponent = getGame().getOponent();
 
 	if (Intersect(*bcc, oponent->getCollision())) {
-		if (bcc->getPosition().y + bcc->getSizeY() - 50 < oponent->getPosition().y) {
+		if (lastFramRegistered.y <= oponent->getPosition().y + oponent->getSizeY()) {
 
 			if (mb->getUpwardSpeed() > 0) {
 				mb->setUpwardSpeed(-mb->getUpwardSpeed());
@@ -63,6 +64,8 @@ void Ball::updateActor(float dt)
 			}
 		}
 	}
+
+	 lastFramRegistered = bcc->getPosition();
 }
 
 

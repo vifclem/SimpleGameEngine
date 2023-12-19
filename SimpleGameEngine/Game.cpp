@@ -7,6 +7,8 @@
 #include "BackgroundSpriteComponent.h"
 #include "BoxComponent.h"
 #include "Bricks.h"
+#include "MoveBall.h"
+
 
 bool Game::initialize()
 {
@@ -32,6 +34,9 @@ void Game::load()
 	Assets::loadTexture(renderer, "Res\\Ball.png", "Ball");
 	Assets::loadTexture(renderer, "Res\\Wall.png", "Wall");
 	Assets::loadTexture(renderer, "Res\\Player.png", "Player");
+	Assets::loadTexture(renderer, "Res\\Win.png", "Win");
+	Assets::loadTexture(renderer, "Res\\Lost.png", "Lost");
+
 
 
 
@@ -110,6 +115,21 @@ Ball* Game::getBall() {
 
 void Game::setBall(Ball* ballP) {
 	ball = ballP;
+}
+
+void Game::Win()
+{
+	
+	new Ball((int)Assets::getTexture("Win").getWidth(), (int)Assets::getTexture("Win").getHeight());
+	SpriteComponent* winSprite = new SpriteComponent(ball, Assets::getTexture("Win"));
+}
+
+void Game::Lost()
+{
+	new Ball((int)Assets::getTexture("Lost").getWidth(), (int)Assets::getTexture("Lost").getHeight());
+	SpriteComponent* lostSprite = new SpriteComponent(ball, Assets::getTexture("Lost"));
+
+
 }
 
 void Game::EndGame()

@@ -142,6 +142,7 @@
     <ClCompile Include="Bricks.cpp" />
     <ClCompile Include="CircleCollisionComponent.cpp" />
     <ClCompile Include="Component.cpp" />
+    <ClCompile Include="EndGameMessage.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="InputComponent.cpp" />
     <ClCompile Include="Log.cpp" />
@@ -170,6 +171,7 @@
     <ClInclude Include="Bricks.h" />
     <ClInclude Include="CircleCollisionComponent.h" />
     <ClInclude Include="Component.h" />
+    <ClInclude Include="EndGameMessage.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="InputComponent.h" />
     <ClInclude Include="Log.h" />

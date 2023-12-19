@@ -41,7 +41,6 @@ void MoveBall::update(float dt)
 		}
 		else if (owner.getPosition().y + owner.getSizeY() > WINDOW_HEIGHT) {
 			setUpwardSpeed(abs(getUpwardSpeed()));
-			
 			ennemieScore += 1;
 			owner.setPosition(Vector2{ 400,400 });
 		}
@@ -52,6 +51,7 @@ void MoveBall::update(float dt)
 
 	if (playerScore >= 5) {
 		//close window
+		getGame().Win();
 		getGame().EndGame();
 		cout << "You WON !!" << endl;
 	}

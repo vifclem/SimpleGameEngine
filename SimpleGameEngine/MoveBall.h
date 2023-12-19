@@ -17,6 +17,8 @@ public:
 
 	float getForwardSpeed();
 	float getUpwardSpeed();
+	const float getPlayerScore() const { return playerScore; }
+	const float getEnnemieScore() const { return ennemieScore; }
 
 
 private:

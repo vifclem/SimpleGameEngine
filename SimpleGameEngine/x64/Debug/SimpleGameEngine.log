@@ -1,8 +1,2 @@
-﻿  Game.cpp
-C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\Game.cpp(38,102): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\Game.cpp(38,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\Game.cpp(41,99): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\Game.cpp(41,54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\Game.cpp(44,96): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\Game.cpp(44,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+﻿  MoveBall.cpp
   SimpleGameEngine.vcxproj -> C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\x64\Debug\SimpleGameEngine.exe

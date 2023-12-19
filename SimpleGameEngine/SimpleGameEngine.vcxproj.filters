@@ -93,6 +93,9 @@
     <ClCompile Include="MoveBall.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="EndGameMessage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Log.h">
@@ -171,6 +174,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MoveBall.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EndGameMessage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
