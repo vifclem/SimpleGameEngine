@@ -1,2 +1,12 @@
-﻿  MoveBall.cpp
-  SimpleGameEngine.vcxproj -> C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\x64\Debug\SimpleGameEngine.exe
+﻿  Game.cpp
+C:\Users\cleme\OneDrive\Documents\Work\Github\SimpleGameEngine\SimpleGameEngine\Game.cpp(42,102): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\cleme\OneDrive\Documents\Work\Github\SimpleGameEngine\SimpleGameEngine\Game.cpp(42,55): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\cleme\OneDrive\Documents\Work\Github\SimpleGameEngine\SimpleGameEngine\Game.cpp(45,99): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\cleme\OneDrive\Documents\Work\Github\SimpleGameEngine\SimpleGameEngine\Game.cpp(45,54): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\cleme\OneDrive\Documents\Work\Github\SimpleGameEngine\SimpleGameEngine\Game.cpp(48,96): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\cleme\OneDrive\Documents\Work\Github\SimpleGameEngine\SimpleGameEngine\Game.cpp(48,51): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\cleme\OneDrive\Documents\Work\Github\SimpleGameEngine\SimpleGameEngine\Game.cpp(124,94): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\cleme\OneDrive\Documents\Work\Github\SimpleGameEngine\SimpleGameEngine\Game.cpp(124,50): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\cleme\OneDrive\Documents\Work\Github\SimpleGameEngine\SimpleGameEngine\Game.cpp(130,96): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\cleme\OneDrive\Documents\Work\Github\SimpleGameEngine\SimpleGameEngine\Game.cpp(130,51): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+  SimpleGameEngine.vcxproj -> C:\Users\cleme\OneDrive\Documents\Work\Github\SimpleGameEngine\x64\Debug\SimpleGameEngine.exe

@@ -30,7 +30,6 @@ void Game::load()
 	Assets::loadTexture(renderer, "Res\\Astroid.png", "Astroid");
 	Assets::loadTexture(renderer, "Res\\Ship.png", "Ship");
 	Assets::loadTexture(renderer, "Res\\Laser.png", "Laser");
-	Assets::loadTexture(renderer, "Res\\Paddle.png", "paddle");
 	Assets::loadTexture(renderer, "Res\\Ball.png", "Ball");
 	Assets::loadTexture(renderer, "Res\\Wall.png", "Wall");
 	Assets::loadTexture(renderer, "Res\\Player.png", "Player");
@@ -68,13 +67,13 @@ void Game::load()
 
 	// Background
 	// Create the "far back" background
-	/*vector<Texture*> bgTexsFar {
+	vector<Texture*> bgTexsFar {
 		&Assets::getTexture("Farback01"),
 			& Assets::getTexture("Farback02")
-	};*/
-	/*Actor* bgFar = new Actor();
+	};
+	Actor* bgFar = new Actor();
 	BackgroundSpriteComponent* bgSpritesFar = new BackgroundSpriteComponent(bgFar, bgTexsFar);
-	bgSpritesFar->setScrollSpeed(-100.0f);*/
+	bgSpritesFar->setScrollSpeed(-100.0f);
 
 	// Create the closer background
 	/*Actor* bgClose = new Actor();
@@ -85,6 +84,8 @@ void Game::load()
 	BackgroundSpriteComponent* bgSpritesClose = new BackgroundSpriteComponent(bgClose, bgTexsClose, 50);
 	bgSpritesClose->setScrollSpeed(-200.0f);*/
 	
+	
+
 }
 
 Player* Game::getPlayer() {
