@@ -15,7 +15,6 @@ MoveBall::MoveBall(Actor* ownerP) :
 
 void MoveBall::update(float dt)
 {
-	//MoveComponent::update(dt);
 
 	if (!Maths::nearZero(angularSpeed))
 	{
@@ -23,6 +22,7 @@ void MoveBall::update(float dt)
 		owner.setRotation(newRotation);
 	}
 
+	// Collision with the window
 	if (!Maths::nearZero(forwardSpeed) && !Maths::nearZero(upwardSpeed))
 	{
 
@@ -51,13 +51,14 @@ void MoveBall::update(float dt)
 
 	if (playerScore >= 5) {
 		//close window
-		getGame().Win();
+		//getGame().Win();
 		getGame().EndGame();
 		cout << "You WON !!" << endl;
 	}
 
 	if (ennemieScore >= 5) {
 		//close window
+		//getGame().Lost();
 		getGame().EndGame();
 		cout << "You LOST !!" << endl;
 

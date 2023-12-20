@@ -8,6 +8,8 @@
 #include "Player.h"
 #include "Ball.h"
 #include "Oponent.h"
+#include "EndGameMessage.h"
+
 
 using std::vector;
 
@@ -74,5 +76,6 @@ private:
 	Player* player = nullptr;
 	Oponent* oponent = nullptr;
 	Ball* ball = nullptr;
+	EndGameMessage* endGameMesaage = nullptr;
 	
 };

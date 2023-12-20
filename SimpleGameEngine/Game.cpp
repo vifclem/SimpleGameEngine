@@ -20,17 +20,13 @@ bool Game::initialize()
 void Game::load()
 {
 	// Load textures
-	Assets::loadTexture(renderer, "Res\\Ship01.png", "Ship01");
-	Assets::loadTexture(renderer, "Res\\Ship02.png", "Ship02");
-	Assets::loadTexture(renderer, "Res\\Ship03.png", "Ship03");
-	Assets::loadTexture(renderer, "Res\\Ship04.png", "Ship04");
 	Assets::loadTexture(renderer, "Res\\Farback01.png", "Farback01");
 	Assets::loadTexture(renderer, "Res\\Farback02.png", "Farback02");
-	Assets::loadTexture(renderer, "Res\\Stars.png", "Stars");
-	Assets::loadTexture(renderer, "Res\\Astroid.png", "Astroid");
-	Assets::loadTexture(renderer, "Res\\Ship.png", "Ship");
-	Assets::loadTexture(renderer, "Res\\Laser.png", "Laser");
+	Assets::loadTexture(renderer, "Res\\BackGround.png", "BackGround");
 	Assets::loadTexture(renderer, "Res\\Ball.png", "Ball");
+	Assets::loadTexture(renderer, "Res\\Ball1.png", "Ball1");
+	Assets::loadTexture(renderer, "Res\\Ball2.png", "Ball2");
+	Assets::loadTexture(renderer, "Res\\Ball3.png", "Ball3");
 	Assets::loadTexture(renderer, "Res\\Wall.png", "Wall");
 	Assets::loadTexture(renderer, "Res\\Player.png", "Player");
 	Assets::loadTexture(renderer, "Res\\Win.png", "Win");
@@ -38,35 +34,29 @@ void Game::load()
 
 
 
-
+	// Creat player
 	new Player((int)Assets::getTexture("Player").getWidth(), (int)Assets::getTexture("Player").getHeight());
 	SpriteComponent* wallSprite = new SpriteComponent(player, Assets::getTexture("Player"));
 
+	// Creat oponent
 	new Oponent((int)Assets::getTexture("Wall").getWidth(), (int)Assets::getTexture("Wall").getHeight());
 	SpriteComponent* wallSprite2 = new SpriteComponent(oponent, Assets::getTexture("Wall"));
 
+	// Creat ball
 	new Ball((int)Assets::getTexture("Ball").getWidth(), (int)Assets::getTexture("Ball").getHeight());
 	SpriteComponent* ballSprite = new SpriteComponent(ball, Assets::getTexture("Ball"));
 
-	// Animated sprite
-	/*
+	// Animated sprite for the ball
 	vector<Texture*> animTextures {
-		&Assets::getTexture("Ship01"),
-		&Assets::getTexture("Ship02"),
-		&Assets::getTexture("Ship03"),
-		&Assets::getTexture("Ship04"),
+		&Assets::getTexture("Ball"),
+		&Assets::getTexture("Ball1"),
+		&Assets::getTexture("Ball2"),
+		&Assets::getTexture("Ball3"),
 	};
-	Actor* ship = new Actor();
-	AnimSpriteComponent* animatedSprite = new AnimSpriteComponent(ship, animTextures);
-	ship->setPosition(Vector2{ 100, 300 });
-	*/
-
-	//// Controlled ship
-	//Ship* ship = new Ship();
-	//ship->setPosition(Vector2{ 100, 300 });
+	AnimSpriteComponent* animatedSprite = new AnimSpriteComponent(ball, animTextures);
+	animatedSprite->setAnimFPS(8.0f);
 
 	// Background
-	// Create the "far back" background
 	vector<Texture*> bgTexsFar {
 		&Assets::getTexture("Farback01"),
 			& Assets::getTexture("Farback02")
@@ -74,17 +64,6 @@ void Game::load()
 	Actor* bgFar = new Actor();
 	BackgroundSpriteComponent* bgSpritesFar = new BackgroundSpriteComponent(bgFar, bgTexsFar);
 	bgSpritesFar->setScrollSpeed(-100.0f);
-
-	// Create the closer background
-	/*Actor* bgClose = new Actor();
-	std::vector<Texture*> bgTexsClose {
-		&Assets::getTexture("Stars"),
-			& Assets::getTexture("Stars")
-	};
-	BackgroundSpriteComponent* bgSpritesClose = new BackgroundSpriteComponent(bgClose, bgTexsClose, 50);
-	bgSpritesClose->setScrollSpeed(-200.0f);*/
-	
-	
 
 }
 
@@ -121,16 +100,15 @@ void Game::setBall(Ball* ballP) {
 void Game::Win()
 {
 	
-	new Ball((int)Assets::getTexture("Win").getWidth(), (int)Assets::getTexture("Win").getHeight());
+	new EndGameMessage((int)Assets::getTexture("Win").getWidth(), (int)Assets::getTexture("Win").getHeight());
 	SpriteComponent* winSprite = new SpriteComponent(ball, Assets::getTexture("Win"));
+	
 }
 
 void Game::Lost()
 {
-	new Ball((int)Assets::getTexture("Lost").getWidth(), (int)Assets::getTexture("Lost").getHeight());
+	new EndGameMessage((int)Assets::getTexture("Lost").getWidth(), (int)Assets::getTexture("Lost").getHeight());
 	SpriteComponent* lostSprite = new SpriteComponent(ball, Assets::getTexture("Lost"));
-
-
 }
 
 void Game::EndGame()
@@ -138,8 +116,6 @@ void Game::EndGame()
 	isRunning = false;
 	close();
 }
-
-
 
 void Game::processInput()
 {

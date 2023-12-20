@@ -6,10 +6,7 @@ class EndGameMessage : public Actor
 {
 public:
 
-	EndGameMessage();
-
-protected:
-
+	EndGameMessage(float mSizeX, float mSizeY);
 
 };
 

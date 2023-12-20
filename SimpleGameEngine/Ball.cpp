@@ -34,6 +34,7 @@ Ball::Ball(float mSizeX, float mSizeY) : Actor() {
 
 void Ball::updateActor(float dt)
 {
+	//player collision
 	auto player = getGame().getPlayer();
 
 	if (Intersect(*bcc, player->getCollision())) {
@@ -50,6 +51,7 @@ void Ball::updateActor(float dt)
 		}
 	}
 
+	//oponent collision
 	auto oponent = getGame().getOponent();
 
 	if (Intersect(*bcc, oponent->getCollision())) {
