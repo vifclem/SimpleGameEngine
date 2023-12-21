@@ -49,7 +49,7 @@ void MoveBall::update(float dt)
 		owner.setPosition(newPosition);
 	}
 
-	if (playerScore >= 5) {
+	if (playerScore >= 5 && ennemieScore < 5) {
 		//close window
 		getGame().Win();
 		if (playerScore >= 6) {
@@ -59,7 +59,7 @@ void MoveBall::update(float dt)
 	}
 	
 
-	if (ennemieScore >= 5) {
+	if (ennemieScore >= 5 && playerScore < 5) {
 		//close window
 		getGame().Lost();
 		if (ennemieScore >= 6) {
