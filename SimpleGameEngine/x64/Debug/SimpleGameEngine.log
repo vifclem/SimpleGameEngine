@@ -1,22 +1,2 @@
-﻿  Actor.cpp
-  Ball.cpp
-  BoxComponent.cpp
-  Bricks.cpp
-  Game.cpp
-C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\Game.cpp(38,102): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\Game.cpp(38,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\Game.cpp(42,99): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\Game.cpp(42,54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\Game.cpp(46,96): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\Game.cpp(46,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\Game.cpp(108,96): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\Game.cpp(108,52): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\Game.cpp(116,98): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\SimpleGameEngine\Game.cpp(116,53): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Main.cpp
-  MoveBall.cpp
-  Oponent.cpp
-  Player.cpp
-  SpriteComponent.cpp
-  Generating Code...
+﻿  LINK : C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\x64\Debug\SimpleGameEngine.exe not found or not built by the last incremental link; performing full link
   SimpleGameEngine.vcxproj -> C:\Users\clement.expert\Documents\GitHub\SimpleGameEngine\x64\Debug\SimpleGameEngine.exe
