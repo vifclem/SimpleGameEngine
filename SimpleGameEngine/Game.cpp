@@ -97,18 +97,24 @@ void Game::setBall(Ball* ballP) {
 	ball = ballP;
 }
 
+void Game::setBricks(Bricks* bricks)
+{
+	brick = bricks;
+}
+
 void Game::Win()
 {
 	
-	new EndGameMessage((int)Assets::getTexture("Win").getWidth(), (int)Assets::getTexture("Win").getHeight());
-	SpriteComponent* winSprite = new SpriteComponent(ball, Assets::getTexture("Win"));
+	new Bricks((int)Assets::getTexture("Win").getWidth(), (int)Assets::getTexture("Win").getHeight());
+	SpriteComponent* winSprite = new SpriteComponent(brick, Assets::getTexture("Win"));
+	
 	
 }
 
 void Game::Lost()
 {
-	new EndGameMessage((int)Assets::getTexture("Lost").getWidth(), (int)Assets::getTexture("Lost").getHeight());
-	SpriteComponent* lostSprite = new SpriteComponent(ball, Assets::getTexture("Lost"));
+	new Bricks((int)Assets::getTexture("Lost").getWidth(), (int)Assets::getTexture("Lost").getHeight());
+	SpriteComponent* lostSprite = new SpriteComponent(brick, Assets::getTexture("Lost"));
 }
 
 void Game::EndGame()

@@ -1,28 +1,19 @@
 #include "Bricks.h"
-#include "Random.h"
 #include "Window.h"
-#include "Math.h"
-#include "Assets.h"
-#include "BoxComponent.h"
+#include "Game.h"
 
-Bricks::Bricks() :Actor(), collision(nullptr) {
+Bricks::Bricks(float mSizeX, float mSizeY) :Actor() {
 
+	setSizeX(mSizeX);
+	setSizeY(mSizeY);
 
-
-	Vector2 randPos = Random::getVector(Vector2::zero, Vector2(WINDOW_WIDTH - 90, WINDOW_HEIGHT/2));
-
-	Vector2 brickPos = Vector2{ 0, 380 };
-
-    setPosition(brickPos);
+    setPosition(Vector2{ 200, 200 });
 	
+
+    bc = new BoxComponent(this, mSizeX, mSizeY);
+
 	
-	setRotation(0);
-
-	BoxComponent* bc = new BoxComponent(this, 1030, 1);
-
-	collision = new CircleCollisionComponent(this);
-	collision->setRadius(40);
-
+	getGame().setBricks(this);
 	
 	
 

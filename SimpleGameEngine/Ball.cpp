@@ -18,7 +18,6 @@ Ball::Ball(float mSizeX, float mSizeY) : Actor() {
 	lastFramRegistered = this->getPosition();
 
 	
-	//bc = new BoxComponent(this, mSizeX, mSizeY);
 	mb = new MoveBall(this);
 	mb->setForwardSpeed(300.0f);
 	mb->setUpwardSpeed(300.0f);
@@ -42,11 +41,12 @@ void Ball::updateActor(float dt)
 		if (lastFramRegistered.y + bcc->getSizeY()<= player->getPosition().y) {
 			
 			if (mb->getUpwardSpeed() < 0) {
-				mb->setUpwardSpeed(-mb->getUpwardSpeed());
+				mb->setUpwardSpeed(-mb->getUpwardSpeed() + 50);
+				
 			}
 			else
 			{
-				mb->setUpwardSpeed(mb->getUpwardSpeed());
+				mb->setUpwardSpeed(mb->getUpwardSpeed() + 50);
 			}
 		}
 	}
@@ -58,11 +58,11 @@ void Ball::updateActor(float dt)
 		if (lastFramRegistered.y <= oponent->getPosition().y + oponent->getSizeY()) {
 
 			if (mb->getUpwardSpeed() > 0) {
-				mb->setUpwardSpeed(-mb->getUpwardSpeed());
+				mb->setUpwardSpeed(-mb->getUpwardSpeed() + 50);
 			}
 			else
 			{
-				mb->setUpwardSpeed(mb->getUpwardSpeed());
+				mb->setUpwardSpeed(mb->getUpwardSpeed() + 50);
 			}
 		}
 	}

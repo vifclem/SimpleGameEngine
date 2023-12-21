@@ -49,6 +49,8 @@ public:
 	Ball* getBall();
 	void setBall(Ball* ball);
 
+	void setBricks(Bricks* bricks);
+
 	void Win();
 	void Lost();
 
@@ -76,6 +78,7 @@ private:
 	Player* player = nullptr;
 	Oponent* oponent = nullptr;
 	Ball* ball = nullptr;
+	Bricks* brick = nullptr;
 	EndGameMessage* endGameMesaage = nullptr;
 	
 };

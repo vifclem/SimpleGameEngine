@@ -1,18 +1,17 @@
 #pragma once
 #include "Actor.h"
-#include "CircleCollisionComponent.h"
-
+#include "BoxComponent.h"
 class Bricks : public Actor
 {
 public:
-	Bricks();
+	Bricks(float mSizeX, float mSizeY);
 	~Bricks();
 
-	CircleCollisionComponent& getCollision() { return *collision; }
+	
 
-private:
+protected:
 
-	CircleCollisionComponent* collision;
+	BoxComponent* bc;
 	
 };
 

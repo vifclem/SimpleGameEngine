@@ -17,7 +17,6 @@ public :
 	
 protected:
 	
-	BoxComponent* bc;
 	MoveBall* mb;
 	BoxCollisionComponent* bcc;
 	Vector2 lastFramRegistered;

@@ -51,17 +51,21 @@ void MoveBall::update(float dt)
 
 	if (playerScore >= 5) {
 		//close window
-		//getGame().Win();
-		getGame().EndGame();
-		cout << "You WON !!" << endl;
+		getGame().Win();
+		if (playerScore >= 6) {
+			getGame().EndGame();
+			cout << "You WON !!" << endl;
+		}
 	}
+	
 
 	if (ennemieScore >= 5) {
 		//close window
-		//getGame().Lost();
-		getGame().EndGame();
-		cout << "You LOST !!" << endl;
-
+		getGame().Lost();
+		if (ennemieScore >= 6) {
+			getGame().EndGame();
+			cout << "You LOST !!" << endl;
+		}
 	}
 }
 
